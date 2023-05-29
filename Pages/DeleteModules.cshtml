@@ -1,0 +1,8 @@
+﻿@page
+@{
+    
+    string ModuleID = Request.Query["Module_Code"];
+    ModuleFolder.Module module = new ModuleFolder.Module();
+    module.delete(ModuleID);
+    Response.Redirect("/AllModules");
+}

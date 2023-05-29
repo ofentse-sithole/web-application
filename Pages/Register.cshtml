@@ -1,0 +1,30 @@
+﻿@page
+@model ST10104487_POE_2022.Pages.RegisterModel
+@{
+    Layout = "_LoginLayout";
+}
+
+<div class="login-page">
+    <div class="form">
+
+
+        
+        <form class="register-form">
+            <input type="text" placeholder="Username" name="txtUsername" />
+            <input type="password" placeholder="password" name="txtPassword" />
+            <input type="password" placeholder="Confirm Password" name="txtConfirmPassword" 
+            <button type = "submit">">Register</button>
+
+            <p class="message">Already registered? <a href="/Login">Log In</a></p>
+        </form>
+
+        <form class="login-form">
+            <input type="text" placeholder="Username" name="txtUsername" />
+            <input type="password" placeholder="Password" name="txtPassword" />
+            <input type="password" placeholder="Confirm Password" name="txtConfirmPassword" />
+            <button type="submit">create</button>
+            <p class="message">Already registered? <a href="/Login">Log In</a></p>
+        </form>
+
+    </div>
+</div>

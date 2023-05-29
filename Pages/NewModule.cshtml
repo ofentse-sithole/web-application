@@ -1,0 +1,45 @@
+﻿@page
+@model ST10104487_POE_2022.Pages.NewModuleModel
+@{
+    Layout = "_Layout";
+}
+
+<h2>New Module</h2>
+
+<form class = "row g-3" method="post">
+
+   @* Module ID*@
+    <div class="form-group col-md-6">
+        <label for="inputModuleID" class="form-label">Module Code</label>
+        <input type="text" class="form-control" id="inputModuleID" placeholder="Module ID"
+               name="txtModuleID">
+    </div>
+
+    @*Module Name*@
+    <div class="form-group col-md-6">
+        <label for="inputModule_Name" class="form-label">Module Name</label>
+      <input type="text" class="form-control" id="inputModule_Name" placeholder="Module Name" name="txtModuleName">
+    </div>
+
+    @*Number Of Credits*@
+    <div class="form-group col-md-6">
+        <label for="inputNumCredits" class="form-label">Number Of Credits</label>
+      <input type="text" class="form-control" id="inputNumCredits" placeholder="Number of Credits" name="txtNumCredits">
+    </div>
+
+    @*Class Per Hour*@
+    <div class="form-group col-md-6">
+        <label for="inputClassHour" class="form-label">Class Per Hour</label>
+      <input type="text" class="form-control" id="inputClassHour" placeholder="Class Per Hour" name="txtClassHour">
+    </div>
+
+    @*Number of Weeks*@
+    <div class="form-group col-md-6">
+        <label for="inputNumWeeks" class="form-label">Number Of Weeks</label>
+      <input type="text" class="form-control" id="inputNumWeeks" placeholder="Number of Weeks" name="txtNumWeeks">
+    </div>
+
+    <div class="col-12">
+    <button type="submit" class="btn btn-primary">Add Module</button>
+    </div>
+</form>

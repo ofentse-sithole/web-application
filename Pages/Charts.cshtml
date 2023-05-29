@@ -1,0 +1,50 @@
+﻿@page
+@model ST10104487_POE_2022.Pages.ChartsModel
+@{
+}
+
+<<h2>Modules Chart<h2/>
+
+
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    //will hold data on y-axis and x-axis
+    var arModuleNames =[];
+    var arSelfStudy = [];
+
+    @foreach (var item in Model.modulelist)
+    {
+        @:arModuleNames[].push(@item.Module_Name);
+        @:arSelfStudy[].push(@item.SelfStudy);
+    }
+
+    const labels = arModuleNames;
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: arSelfStudy,
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    };
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>

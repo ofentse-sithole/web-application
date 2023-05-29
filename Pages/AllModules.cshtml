@@ -1,0 +1,42 @@
+﻿@page
+@model ST10104487_POE_2022.Pages.AllModulesModel
+@{
+    Layout = "_Layout";
+}
+
+<h2>All Modules</h2>
+
+<a class ="btn btn-primary" href="/NewModule">Add New Module</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Module_Code</td>
+            <td>Module_Name</td>
+            <td>NumCredits</td>
+            <td>ClassHour</td>
+            <td>NumWeeks</td>
+            <<td>Hours Of Self Study Per Week</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var mlist in Model.modulelist)
+        {
+            <tr>
+                <td>@mlist.Module_Code</td>
+                <td>@mlist.Module_Name</td>
+                <td>@mlist.NumCredits</td>
+                <td>@mlist.ClassHour</td>
+                <td>@mlist.NumWeeks</td>
+                <td>@mlist.SelfStudy</td>
+            <td>
+                <a class ="btn btn-primary" href="/EditModule?Module_Code.@mlist.Module_Code">Edit</a>
+                <a class ="btn btn-danger" href="/DeleteModule?Module_Code.@mlist.Module_Code">Delete</a>
+            </td>
+            </tr>
+            
+        }
+    </tbody>
+
+</table>
